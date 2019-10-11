@@ -41,8 +41,8 @@ class Server extends AbstractObject implements ExtensibleInterface
      * @param array       $additionalProperties
      */
     public function __construct(
-        string $url,
-        string $description = null,
+        $url,
+        $description = null,
         array $variables = null,
         array $additionalProperties = []
     ) {

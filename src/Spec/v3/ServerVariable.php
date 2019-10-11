@@ -39,8 +39,8 @@ class ServerVariable extends AbstractObject implements ExtensibleInterface
      * @param array    $additionalProperties
      */
     public function __construct(
-        string $default,
-        string $description = null,
+        $default,
+        $description = null,
         array $enum = null,
         array $additionalProperties = []
     ) {

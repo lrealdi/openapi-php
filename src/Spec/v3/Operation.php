@@ -162,8 +162,8 @@ class Operation extends AbstractObject implements ExtensibleInterface
      */
     public function __construct(
         array $responses,
-        string $operationId = null,
-        string $summary = null,
+        $operationId = null,
+        $summary = null,
         array $additionalProperties = []
     ) {
         parent::__construct($additionalProperties);

@@ -139,7 +139,7 @@ class Document extends AbstractObject implements ExtensibleInterface
      * @param string     $openapi
      * @param array      $additionalProperties
      */
-    public function __construct(Info $info, array $paths, string $openapi = '3.0.1', array $additionalProperties = [])
+    public function __construct(Info $info, array $paths, $openapi = '3.0.1', array $additionalProperties = [])
     {
         parent::__construct($additionalProperties);
 

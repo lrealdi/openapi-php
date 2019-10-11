@@ -28,7 +28,7 @@ class ExternalDocumentation extends AbstractObject implements ExtensibleInterfac
      * @param string|null $description
      * @param array       $additionalProperties
      */
-    public function __construct(string $url, string $description = null, array $additionalProperties = [])
+    public function __construct($url, $description = null, array $additionalProperties = [])
     {
         parent::__construct($additionalProperties);
         $this->url         = $url;

@@ -28,7 +28,7 @@ class Reference extends AbstractObject
     /**
      * @param string $ref
      */
-    public function __construct(string $ref)
+    public function __construct($ref)
     {
         parent::__construct([]);
         $this->ref = $ref;

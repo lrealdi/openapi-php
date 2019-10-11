@@ -51,7 +51,7 @@ class Response extends AbstractObject implements ExtensibleInterface
      * @param array                     $additionalProperties
      */
     public function __construct(
-        string $description,
+        $description,
         array $content = null,
         array $headers = null,
         array $additionalProperties = []

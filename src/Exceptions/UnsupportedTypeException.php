@@ -2,12 +2,12 @@
 
 namespace erasys\OpenApi\Exceptions;
 
-use Throwable;
+use Exception;
 use UnexpectedValueException;
 
 class UnsupportedTypeException extends UnexpectedValueException implements OpenApiException
 {
-    public function __construct(string $type, int $code = 0, Throwable $previous = null)
+    public function __construct($type, $code = 0, Exception $previous = null)
     {
         $message = 'Unsupported type: %s.';
         parent::__construct(sprintf($message, $type), $code, $previous);

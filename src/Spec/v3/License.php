@@ -29,7 +29,7 @@ class License extends AbstractObject implements ExtensibleInterface
      * @param string|null $url
      * @param array       $additionalProperties
      */
-    public function __construct(string $name, string $url = null, array $additionalProperties = [])
+    public function __construct($name, $url = null, array $additionalProperties = [])
     {
         parent::__construct($additionalProperties);
         $this->name = $name;

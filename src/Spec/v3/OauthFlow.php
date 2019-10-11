@@ -53,8 +53,8 @@ class OauthFlow extends AbstractObject implements ExtensibleInterface
      * @param array    $additionalProperties
      */
     public function __construct(
-        string $authorizationUrl,
-        string $tokenUrl,
+        $authorizationUrl,
+        $tokenUrl,
         array $scopes,
         array $additionalProperties = []
     ) {

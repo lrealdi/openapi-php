@@ -26,7 +26,7 @@ class DocumentValidator
      * @param string $jsonSchema JSON Schema of the Open API specification, in YAML format. If omitted, the bundled
      * Open API 3.0.x JSON Schema file will be used.
      */
-    public function __construct(string $jsonSchema = null)
+    public function __construct($jsonSchema = null)
     {
         if (is_null($jsonSchema)) {
             $schemaFile = realpath(__DIR__ . $this->defaultJsonSchemaFile);
@@ -43,7 +43,7 @@ class DocumentValidator
      * @param Document $document
      * @return ValidationResult
      */
-    public function validate(Document $document): ValidationResult
+    public function validate(Document $document)
     {
         $documentObject = $document->toObject();
         $validator      = new JsonSchema\Validator();
@@ -51,7 +51,7 @@ class DocumentValidator
         return new ValidationResult($validator->getErrors());
     }
 
-    public function getJsonSchema(): stdClass
+    public function getJsonSchema()
     {
         return $this->jsonSchema;
     }

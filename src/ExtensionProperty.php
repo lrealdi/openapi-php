@@ -25,7 +25,7 @@ class ExtensionProperty
      * @param string     $name Extension property name without the 'x-' prefix.
      * @param mixed|null $value
      */
-    public function __construct(string $name, $value = null)
+    public function __construct($name, $value = null)
     {
         $this->name  = 'x-' . $name;
         $this->value = $value;
@@ -34,7 +34,7 @@ class ExtensionProperty
     /**
      * @return string
      */
-    public function getName(): string
+    public function getName()
     {
         return $this->name;
     }

@@ -17,7 +17,7 @@ class Header extends AbstractParameter
      * @param string|null $description
      * @param array       $additionalProperties
      */
-    public function __construct(string $description = null, array $additionalProperties = [])
+    public function __construct($description = null, array $additionalProperties = [])
     {
         parent::__construct($additionalProperties);
         $this->description = $description;

@@ -42,8 +42,8 @@ class RequestBody extends AbstractObject implements ExtensibleInterface
      */
     public function __construct(
         array $content,
-        string $description = null,
-        bool $required = null,
+        $description = null,
+        $required = null,
         array $additionalProperties = []
     ) {
         parent::__construct($additionalProperties);

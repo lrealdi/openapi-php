@@ -8,8 +8,6 @@ use erasys\OpenApi\Exceptions\UndefinedPropertyException;
 use erasys\OpenApi\Exceptions\UnsupportedTypeException;
 use erasys\OpenApi\ExtensionProperty;
 use erasys\OpenApi\RawValue;
-use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Contracts\Support\Jsonable;
 use JsonSerializable;
 use stdClass;
 use Symfony\Component\Yaml\Yaml;
@@ -22,7 +20,7 @@ use Symfony\Component\Yaml\Yaml;
  * you can always extend the classes and add there your own properties.
  *
  */
-abstract class AbstractObject implements ArrayAccess, Arrayable, Jsonable, JsonSerializable
+abstract class AbstractObject implements ArrayAccess, JsonSerializable
 {
     /**
      * @param array $properties
@@ -177,7 +175,7 @@ abstract class AbstractObject implements ArrayAccess, Arrayable, Jsonable, JsonS
      *
      * @return object|stdClass
      */
-    public function toObject(): stdClass
+    public function toObject()
     {
         return json_decode($this->toJson());
     }
@@ -189,10 +187,10 @@ abstract class AbstractObject implements ArrayAccess, Arrayable, Jsonable, JsonS
      * @return string
      */
     public function toYaml(
-        int $inline = 10,
-        int $indentation = 2,
-        int $flags = 0
-    ): string {
+        $inline = 10,
+        $indentation = 2,
+        $flags = 0
+    ) {
         return Yaml::dump($this->toArray(), $inline, $indentation, $flags);
     }
 

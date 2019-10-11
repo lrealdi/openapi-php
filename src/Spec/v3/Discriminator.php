@@ -32,7 +32,7 @@ class Discriminator extends AbstractObject
      * @param string   $propertyName
      * @param string[] $mapping
      */
-    public function __construct(string $propertyName, array $mapping = null)
+    public function __construct($propertyName, array $mapping = null)
     {
         parent::__construct([]);
         $this->propertyName = $propertyName;

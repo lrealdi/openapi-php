@@ -42,8 +42,8 @@ class Tag extends AbstractObject implements ExtensibleInterface
      * @param array                      $additionalProperties
      */
     public function __construct(
-        string $name,
-        string $description = null,
+        $name,
+        $description = null,
         ExternalDocumentation $externalDocs = null,
         array $additionalProperties = []
     ) {

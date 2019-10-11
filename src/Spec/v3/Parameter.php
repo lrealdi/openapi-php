@@ -69,7 +69,7 @@ class Parameter extends AbstractParameter
      * @param string|null $description
      * @param array       $additionalProperties
      */
-    public function __construct(string $name, string $in, string $description = null, array $additionalProperties = [])
+    public function __construct($name, $in, $description = null, array $additionalProperties = [])
     {
         parent::__construct($additionalProperties);
         $this->name        = $name;

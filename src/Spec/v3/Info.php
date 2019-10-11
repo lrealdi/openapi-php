@@ -61,9 +61,9 @@ class Info extends AbstractObject implements ExtensibleInterface
      * @param array       $additionalProperties
      */
     public function __construct(
-        string $title,
-        string $version,
-        string $description = null,
+        $title,
+        $version,
+        $description = null,
         array $additionalProperties = []
     ) {
         parent::__construct($additionalProperties);
