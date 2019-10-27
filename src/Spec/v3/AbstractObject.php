@@ -152,10 +152,11 @@ abstract class AbstractObject implements ArrayAccess, JsonSerializable
      */
     public function toArray()
     {
-        $vars = (function ($that) {
+        $getPublicVars = (function ($that) {
             // Only public variables
             return get_object_vars($that);
-        })->bindTo(null, null)($this);
+        });
+        $vars = $getPublicVars($this);
 
         return $this->exportValue($vars);
     }
